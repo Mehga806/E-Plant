@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-col">
+    <img src="./logo.png" class="logo">
+       
+        <div class="content">
+            <h1>Add Plants to your Living Space..</h1>
+            <p>Plants are the eukaryotes that form the kingdom Plantae; they are predominantly photosynthetic. This means that they obtain their energy from sunlight. <br> Using chloroplasts derived from endosymbiosis with cyanobacteria to produce sugars from carbon dioxide and water,using the green pigment chlorophyll.</p>
+        <button type="button">Learn More</button>
+        </div>
+    </div>
+
+        <div class="right-col">
+          <div class="slider">
+            <img src="./pic-1.jpg" id="slide" >
+          </div>
+         <div class="slider-content">
+            <h2>Where i can find ideas for small rooms?</h1>
+            <hr>
+                <p>If you love houseplants, these 30 Small Living Room with Plant Ideas can help you plan <br>Your living area so that your favorite indoor plants can be a part of this.</p>
+         <div class="controller">
+            <img src="./back.png" id="BackBtn">
+            <div class="vertical-line"></div>
+            <img src="./next.png" id="NextBtn">
+         </div>
+         
+         
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+    var slide = document.getElementById("slide");
+    var BackBtn = document.getElementById("BackBtn");
+    var NextBtn = document.getElementById("NextBtn");
+
+  var slideimages = new Array(
+    "./pic-1.jpg",
+    "./pic-2.jpg",
+    "./pic-3.jpg",
+    "./pic-4.jpg"
+  );
+  let i=0;
+
+  NextBtn.onclick = function(){
+    if(i<3){
+        slide.src = slideimages[i+1];
+        i++
+    }
+   
+  }
+
+  BackBtn.onclick = function(){
+    if(i>0){
+        slide.src = slideimages[i-1];
+        i--
+    }
+   
+  }
+
+    </script>
+
+
+
+</body>
+</html>
